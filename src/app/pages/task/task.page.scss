@@ -1,0 +1,25 @@
+
+ion-content
+{
+
+
+  //--background: linear-gradient(to right, #ee9ca7, #ffdde1);
+
+  --background: url('https://images.unsplash.com/photo-1554189097-ffe88e998a2b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80') no-repeat 100% 100%;
+//--background: linear-gradient(315deg, #ebbe9b 0%, #e7a977 74%);
+  P{
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 300;
+    margin:0;
+  }
+  ion-card{
+
+    border-width:2px;
+    border-radius: 10px;
+    border-color:grey;
+    border-width:2px;
+    border-style:solid;
+
+}
+}

@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="head">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-item class="try">
+      <ion-label align="center" style="font-weight: 700;font-size: 2em; color: #A6C5C4">
+      Today
+      <p style="font-weight: 400; color: black"> {{today | date:'fullDate'}}</p>
+    </ion-label>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen] ="true">
+
+  <ion-card *ngFor="let item of todoList let i =index">
+    <ion-card-header>
+      <ion-card-subtitle [style.color]="item.value.itemPriority === 'High' ? 'red' : item.value.itemPriority === 'Low' ? 'green' : 'blue'">{{item.value.itemCategory}}</ion-card-subtitle>
+<ion-icon *ngIf="item.value.itemPriority === 'High' " color="danger" name="ellipse"></ion-icon>
+<ion-icon *ngIf="item.value.itemPriority === 'Low' " color="success" name="ellipse"></ion-icon>
+<ion-icon *ngIf="item.value.itemPriority === 'Medium' " color="primary" name="ellipse"></ion-icon>
+<ion-label>
+  {{item.value.itemName}}
+</ion-label>
+    </ion-card-header>
+
+    <ion-card-content>
+    <ion-label>Due:  {{item.value.itemDate | date:'fullDate'}} </ion-label>
+    <br>
+   
+    </ion-card-content>
+
+    <ion-row>
+      <ion-item button (click)="update(item)">
+        <ion-icon name= "create-outline"></ion-icon>
+        <p>Edit</p>
+      </ion-item>
+
+      <ion-item button (click)="delete(item.key)">
+        <ion-icon name= "trash-outline"></ion-icon>
+        <p>Delete</p>
+      </ion-item>
+
+    </ion-row>
+
+
+  </ion-card>
+  <ion-fab class="addtask" vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addTask()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

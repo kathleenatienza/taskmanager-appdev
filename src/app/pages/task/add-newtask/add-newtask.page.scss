@@ -1,0 +1,35 @@
+ion-content
+{
+  --background: url('https://images.unsplash.com/photo-1554189097-ffe88e998a2b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80') no-repeat 100% 100%;
+  P{
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 300;
+    margin:0;
+  }
+  ion-card{
+    margin-top: 70px;
+    border-width:2px;
+    border-radius: 10px;
+    border-color:grey;
+    border-width:2px;
+    border-style:solid;
+
+}
+.ion-margin{
+--background:#A6C5C4
+
+}
+.chipchip{
+  --background:#A6C5C4
+}
+.class-center{
+
+
+    transform: translateX(-50%) translateY(-50%);
+       top: 50%;
+       left: 50%;
+       position: absolute;
+        } // close here
+}
+

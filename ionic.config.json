@@ -1,0 +1,7 @@
+{
+  "name": "taskm",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
